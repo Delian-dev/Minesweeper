@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    background-color: rgb(39, 1, 99);
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    flex-direction: column;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(163, 27, 27);
+  }
+  
+  .title {
+    margin: 13px;
+  }
+  
+   .btn{
+    background-image: url(/photos/retry.jpg); 
+    background-position: center;
+    background-size:cover;
+    background-color: rgb(179, 28, 28);
+    border: 1px;
+    padding: 18px 30px;
+    font-weight: bold;
+    position: relative;
+    margin-bottom:  15px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .btn:hover{
+    font-weight: bolder;
+    border-radius:10px;
+    background-color:rgb(39, 202, 47);
+    color:rgb(179, 28, 28);
+  }
+
+  .subtext {
+    color: rgb(39, 202, 47);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .board {
+    display: inline-grid;
+    padding: 8px;
+    grid-template-columns: repeat(var(--size), 50px);
+    grid-template-rows: repeat(var(--size), 50px);
+    gap: 3.5px;
+    background-color: #777;
+  }
+  
+   
+  .board > * {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 3px solid #BBB;
+    user-select: none;
+  }
+  
+  .board > [data-status="hidden"]:hover {
+    background-color: purple;
+  }
+
+  .board > [data-status="hidden"] {
+    background-color: #BBB;
+    cursor: pointer;
+  }
+  
+  .board > [data-status="mine"] {
+    background-image: url(/photos/bomb1.png);
+    background-size: cover;
+    background-color: red;
+  }
+  
+  .board > [data-status="number"] {
+    background-color:none;
+    color:blue
+  }
+  
+  .board > [data-status="marked"] {
+    background-image: url(/photos/flag.png);
+    background-size: cover;
+    background-color: rgb(72, 139, 34);
+  }
